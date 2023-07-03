@@ -1,4 +1,10 @@
-﻿var options = MemphisClientFactory.GetDefaultOptions();
+﻿using System.Collections.Specialized;
+using Memphis.Client;
+using Memphis.Client.Producer;
+using System.Text;
+
+
+var options = MemphisClientFactory.GetDefaultOptions();
 options.Host = "<memphis-host>";
 options.Username = "<application type username>";
 options.ConnectionToken = "<broker-token>";

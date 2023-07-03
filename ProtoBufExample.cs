@@ -1,4 +1,9 @@
-﻿var options = MemphisClientFactory.GetDefaultOptions();
+﻿using Memphis.Client.Producer;
+using System.Collections.Specialized;
+using Memphis.Client;
+using ProtoBuf;
+
+var options = MemphisClientFactory.GetDefaultOptions();
 options.Host = "<memphis-host>";
 options.Username = "<application type username>";
 options.ConnectionToken = "<broker-token>";
@@ -42,4 +47,15 @@ try
 catch (Exception exception)
 {
     Console.WriteLine($"Error occured: {exception.Message}");
+}
+
+[ProtoContract]
+class Test
+{
+    [ProtoMember(1, Name = "field1")]
+    public required string Field1 { get; set; }
+    [ProtoMember(2, Name = "field2")]
+    public required string Field2 { get; set; }
+    [ProtoMember(3, Name = "field3")]
+    public int Field3 { get; set; }
 }
