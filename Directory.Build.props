@@ -1,0 +1,11 @@
+<Project>
+  <!-- See https://aka.ms/dotnet/msbuild/customize for more details on customizing your build -->
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Memphis.Client" Version="0.2.0" />
+    <PackageReference Include="protobuf-net" Version="3.2.26" />
+  </ItemGroup>
+</Project>
